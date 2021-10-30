@@ -21,7 +21,7 @@ def main():
 
   length_of_output_text = st.slider(label='出力する文字数',
                   min_value=30,
-                  max_value=300,
+                  max_value=200,
                   value=100,
                   )
 
