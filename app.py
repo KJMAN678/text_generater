@@ -67,6 +67,7 @@ def main():
     progress_bar.progress(progress_num)
 
     output_text = "".join(tokenizer.batch_decode(output)).replace("</s>", "")
+    output_text = output_text.replace("</unk>", "")
     progress_num = 95
     status_text.text(f'Progress: {progress_num}%')
     progress_bar.progress(progress_num)
