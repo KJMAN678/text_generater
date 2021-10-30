@@ -15,11 +15,11 @@ def main():
 
   num_of_output_text = st.slider(label='出力する文章の数',
                   min_value=1,
-                  max_value=5,
-                  value=3,
+                  max_value=2,
+                  value=1,
                   )
 
-  length_of_output_text = st.slider(label='出力する文章の数',
+  length_of_output_text = st.slider(label='出力する文字数',
                   min_value=30,
                   max_value=300,
                   value=100,
@@ -42,18 +42,18 @@ def main():
     progress_bar.progress(progress_num)
 
     tokenizer = cached_tokenizer()
-    progress_num = 40
+    progress_num = 25
     status_text.text(f'Progress: {progress_num}%')
     progress_bar.progress(progress_num)
 
     model = cached_model()
-    progress_num = 70
+    progress_num = 40
     status_text.text(f'Progress: {progress_num}%')
     progress_bar.progress(progress_num)
 
     # 推論 
     input = tokenizer.encode(PREFIX_TEXT, return_tensors="pt") 
-    progress_num = 90
+    progress_num = 60
     status_text.text(f'Progress: {progress_num}%')
     progress_bar.progress(progress_num)
 
